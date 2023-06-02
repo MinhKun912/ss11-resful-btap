@@ -6,6 +6,4 @@ import ra.model.Blog;
 
 @Repository
 public interface IBlogRepository extends PagingAndSortingRepository<Blog,String> {
-
-    Iterable<Blog> findAllByCustomer(Customer customer);
 }
