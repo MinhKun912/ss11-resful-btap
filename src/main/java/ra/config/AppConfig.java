@@ -26,9 +26,6 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 import ra.service.blog.IBlogService;
 import ra.service.blog.IBlogServiceIMPL;
-import ra.service.customer.CustomerServiceIMPL;
-import ra.service.customer.ICustomerService;
-
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -119,10 +116,7 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
         return properties;
     }
-    @Bean
-    ICustomerService customerService(){
-        return new CustomerServiceIMPL();
-    }
+
     @Bean
     IBlogService blogService(){
         return new IBlogServiceIMPL();
